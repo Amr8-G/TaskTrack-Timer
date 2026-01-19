@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Focus Timer | مؤقت التركيز</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-dark text-light">
+
+    <div class="container min-vh-100 d-flex align-items-center">
+        <div class="row w-100 justify-content-center g-4">
+            
+            <div class="col-lg-6">
+                <div class="glass-card text-center p-5">
+                    <span class="status-badge">جاري التركيز</span>
+                    <div id="timer" class="display-time">25:00</div>
+                    
+                    <div class="controls d-flex gap-3 justify-content-center mb-4">
+                        <button id="startBtn" class="btn btn-info btn-lg px-5 rounded-pill fw-bold">ابدأ</button>
+                        <button id="resetBtn" class="btn btn-outline-secondary rounded-pill">تصفير</button>
+                    </div>
+
+                    <div class="mode-switcher d-flex justify-content-center gap-2">
+                        <button class="btn btn-sm btn-dark border-secondary" onclick="setTime(25)">دراسة</button>
+                        <button class="btn btn-sm btn-dark border-secondary" onclick="setTime(5)">راحة</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="glass-card p-4 h-100">
+                    <h5 class="mb-4 text-info">قائمة المهام</h5>
+                    <div class="input-group mb-3">
+                        <input type="text" id="taskInput" class="form-control bg-transparent text-light border-secondary" placeholder="ماذا ستذاكر؟">
+                        <button id="addTaskBtn" class="btn btn-info text-white">+</button>
+                    </div>
+                    <div id="taskList" class="task-container">
+                        </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
